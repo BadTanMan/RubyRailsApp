@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_dos.each do |student_do| %>
+      <tr>
+        <td><%= student_do.title %></td>
+        <td><%= student_do.notes %></td>
+        <td><%= link_to 'Show', student_do %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Logout', controller: 'welcome' %>
