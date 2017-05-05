@@ -28,7 +28,7 @@ class TodosController < ApplicationController
 
     respond_to do |format|
       if @todo.save
-        flash[:success] = 'Todo was successfully created.'
+        flash[:success] = 'Class was successfully created.'
         format.html { redirect_to @todo }
         format.json { render :show, status: :created, location: @todo }
       else
@@ -43,7 +43,7 @@ class TodosController < ApplicationController
   def update
     respond_to do |format|
       if @todo.update(todo_params)
-        flash[:success] = 'Todo was successfully updated.'
+        flash[:success] = 'Class was successfully updated.'
         format.html { redirect_to @todo }
         format.json { render :show, status: :ok, location: @todo }
       else
@@ -58,7 +58,7 @@ class TodosController < ApplicationController
   def destroy
     @todo.destroy
     respond_to do |format|
-      flash[:success] = 'Todo was successfully destroyed.'
+      flash[:success] = 'Class was successfully destroyed.'
       format.html { redirect_to todos_url }
       format.json { head :no_content }
     end

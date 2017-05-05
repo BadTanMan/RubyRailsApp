@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20170505051940) do
 
-  create_table "student_dos", force: :cascade do |t|
+  create_table "student_dos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "todos", force: :cascade do |t|
+  create_table "todos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
     t.text "notes"
     t.datetime "created_at", null: false
